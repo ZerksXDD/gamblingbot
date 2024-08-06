@@ -10,9 +10,11 @@ import datetime
 from discord.ext import commands, tasks
 from datetime import datetime, timedelta
 from datetime import datetime
+import keep_alive from keep_alive
+keep_alive()
 
-
-
+bot = Bot(token=os.environ.get('token'))
+dp = DispatcherBot()
 
 
 
