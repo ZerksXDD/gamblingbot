@@ -13,8 +13,7 @@ from datetime import datetime
 import keep_alive from keep_alive
 keep_alive()
 
-bot = Bot(token=os.environ.get('token'))
-dp = DispatcherBot()
+
 
 
 
@@ -771,6 +770,6 @@ async def on_ready():
     print(f'Logged in as {bot.user.name}')
 
 
-# Run the bot
+bot.run(os.getenv('DISCORD_TOKEN'))
 TOKEN = ''  # Replace with your bot token
 bot.run(TOKEN)
